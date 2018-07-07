@@ -27,7 +27,7 @@ hbs.registerHelper('screamIt',(text) => {
 })
 
 app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/public/style.css'));
+
 
 app.get('/',(req, res) => {
     res.render('home.hbs',{
@@ -39,13 +39,13 @@ app.get('/',(req, res) => {
 
 app.get('/about',(req,res) => {
     res.render('about.hbs',{
-        pageTitle:'About Page',
-        message:'Read more about our compnay'
+        pageTitle:'About Us',
+        message:'Read more about our mission'
     })
 
 });
 app.get('/contact',(req, res) => {
-    res.render('contact.hbs',{pageTitle:'Contact Page',message:'Contact us'});
+    res.render('contact.hbs',{pageTitle:'Contact Us',message:'We will provide you the necessary information'});
 });
 
 app.use('/maintenance',(req,res) => {
